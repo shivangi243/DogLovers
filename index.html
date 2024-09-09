@@ -9,104 +9,126 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background: url('images/dogs-playing.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #444;
-      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
     }
     .navbar {
-      background-color: #ffb3b3;
+      background: linear-gradient(90deg, #ffb3b3 0%, #ff8080 100%);
+      border-bottom: 2px solid #ff6666;
     }
     .navbar-brand {
       font-family: 'Pacifico', cursive;
-      font-size: 2rem;
-      color: #333;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 1.1rem;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ff6666;
     }
     .subtitle {
       font-family: 'Caveat', cursive;
-      font-size: 1.5rem;
-      color: #555;
+      font-size: 1.6rem;
+      color: #777;
     }
     .container {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 40px;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
     }
     .dog-image-container img {
-      width: 300px;
-      height: 300px;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 16px;
       object-fit: cover;
       transition: transform 0.3s ease-in-out;
     }
     .dog-image-container img:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     .dog-card {
-      margin-bottom: 20px;
-      transition: transform 0.3s ease-in-out;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .dog-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .dog-card img {
+      border-bottom: 4px solid #ff8080;
     }
     .btn-primary {
-      background-color: #ff8080;
+      background-color: #ff6666;
       border: none;
       transition: background-color 0.3s ease;
     }
     .btn-primary:hover {
-      background-color: #ff6666;
+      background-color: #ff4c4c;
     }
     .testimonial {
       font-style: italic;
-      color: #777;
+      color: #555;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 12px;
     }
     .testimonial img {
       width: 100%;
-      height: 200px;
+      height: 250px;
       border-radius: 12px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       object-fit: cover;
     }
     .fun-facts, .adoption-guide {
       padding: 40px;
       border-radius: 12px;
       margin-top: 40px;
-      background-color: rgba(255, 255, 255, 0.8);
     }
     .fun-facts {
-      background-color: #fff5e1;
+      background: linear-gradient(135deg, #fff5e1 0%, #f8f9fa 100%);
     }
     .fun-facts img {
-      width: 80px;
+      width: 60px;
       margin-bottom: 10px;
     }
     .adoption-guide {
-      background-color: #e8f8f5;
+      background: linear-gradient(135deg, #e8f8f5 0%, #f0f4f8 100%);
     }
     footer {
-      background-color: #ffcccb;
+      background: linear-gradient(90deg, #ffb3b3 0%, #ff8080 100%);
       padding: 20px 0;
+      color: #fff;
     }
     .social-icons i {
-      font-size: 1.5rem;
-      margin-right: 10px;
+      font-size: 1.7rem;
+      margin-right: 15px;
       transition: color 0.3s ease;
     }
     .social-icons i:hover {
-      color: #ff6666;
+      color: #ff4c4c;
     }
-    .form-group img {
-      display: block;
-      margin: 10px auto;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
+    @media (max-width: 767px) {
+      .navbar-brand {
+        font-size: 1.8rem;
+      }
+      .subtitle {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
@@ -139,70 +161,6 @@
     <div id="breedDetails" class="mt-4"></div>
   </div>
 
-  <!-- Featured Dog Breeds Section -->
-  <div class="container text-center my-5">
-    <h2 class="mb-4">Featured Dog Breeds <i class="fas fa-paw"></i></h2>
-    <p class="subtitle">Adopt, Don’t Shop!</p>
-    <div class="row">
-      <div class="col-lg-4 dog-card">
-        <div class="card">
-          <img src="https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg" class="card-img-top" alt="Golden Retriever">
-          <div class="card-body">
-            <h5 class="card-title">Golden Retriever</h5>
-            <p class="card-text">Friendly, intelligent and devoted. Great family dog.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 dog-card">
-        <div class="card">
-          <img src="https://dog.ceo/api/img/labrador/n02099712_4017.jpg" class="card-img-top" alt="Labrador Retriever">
-          <div class="card-body">
-            <h5 class="card-title">Labrador Retriever</h5>
-            <p class="card-text">Outgoing, even-tempered, and friendly. Popular companion.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 dog-card">
-        <div class="card">
-          <img src="https://dog.ceo/api/img/germanshepherd/n02106662_4591.jpg" class="card-img-top" alt="German Shepherd">
-          <div class="card-body">
-            <h5 class="card-title">German Shepherd</h5>
-            <p class="card-text">Courageous, confident, and keen. Excellent working dog.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Testimonials Section -->
-  <div class="container text-center my-5">
-    <h2 class="mb-4">What Our Dog Lovers Say <i class="fas fa-heart"></i></h2>
-    <p class="subtitle">Adopt, Don’t Shop!</p>
-    <div class="row">
-      <div class="col-lg-4">
-        <blockquote class="testimonial">
-          <img src="https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg" alt="Golden Retriever">
-          "Adopting my dog changed my life! Thank you, Dog Lovers!"
-        </blockquote>
-        <p>- Sarah & Charlie (Golden Retriever)</p>
-      </div>
-      <div class="col-lg-4">
-        <blockquote class="testimonial">
-          <img src="https://dog.ceo/api/img/labrador/n02099712_4017.jpg" alt="Labrador Retriever">
-          "The process was smooth and easy. We found our perfect match!"
-        </blockquote>
-        <p>- Jason & Max (Labrador Retriever)</p>
-      </div>
-      <div class="col-lg-4">
-        <blockquote class="testimonial">
-          <img src="https://dog.ceo/api/img/germanshepherd/n02106662_4591.jpg" alt="German Shepherd">
-          "I can't imagine life without my German Shepherd. Thank you!"
-        </blockquote>
-        <p>- Emma & Rex (German Shepherd)</p>
-      </div>
-    </div>
-  </div>
-
   <!-- Adoption Guide Section -->
   <div class="container adoption-guide text-center">
     <h2 class="mb-4">Adoption Guide <i class="fas fa-dog"></i></h2>
@@ -221,21 +179,57 @@
     <ul class="list-unstyled">
       <li><img src="images/dog-fact-1.png" alt="Fact 1"> Dogs can learn more than 1000 words!</li>
       <li><img src="images/dog-fact-2.png" alt="Fact 2"> A dog’s sense of smell is 40 times better than a human’s.</li>
-      <li><img src="images/dog-fact-3.png" alt="Fact 3"> The Labrador Retriever is the most popular breed in the USA.</li>
+      <li><img src="images/dog-fact-3.png" alt="Fact 3"> The Labrador Retriever is the most popular breed in the world.</li>
     </ul>
   </div>
 
   <!-- Footer -->
   <footer class="text-center">
+    <p>&copy; 2024 Dog Lovers | Follow Us:</p>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a> 
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
-    <p>&copy; 2024 Dog Lovers. All Rights Reserved.</p>
   </footer>
 
+  <!-- JavaScript -->
+  <script>
+    // Fetch and display a random dog image
+    document.getElementById('fetchDog').addEventListener('click', function() {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('dogImage').src = data.message;
+        });
+    });
+
+    // Fetch and display dog breed details
+    fetch('breeds.json')
+      .then(response => response.json())
+      .then(data => {
+        const breedDetailsContainer = document.getElementById('breedDetails');
+        data.forEach(breed => {
+          const breedDiv = document.createElement('div');
+          breedDiv.className = 'dog-card';
+          breedDiv.innerHTML = `
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="${breed.imageUrl}" alt="${breed.breedName}" class="img-fluid">
+              </div>
+              <div class="col-md-8 p-3">
+                <h3>${breed.breedName}</h3>
+                <p><strong>Description:</strong> ${breed.description}</p>
+                <p><strong>Size:</strong> ${breed.size}</p>
+                <p><strong>Lifespan:</strong> ${breed.lifespan}</p>
+                <p><strong>Origin:</strong> ${breed.origin}</p>
+              </div>
+            </div>
+          `;
+          breedDetailsContainer.appendChild(breedDiv);
+        });
+      });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="scripts/app.js"></script>
 </body>
 </html>
