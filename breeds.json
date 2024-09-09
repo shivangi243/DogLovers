@@ -1,0 +1,74 @@
+[
+  {
+    "breedId": "B101",
+    "breedName": "retriever golden",
+    "description": "Friendly, intelligent and devoted. Great family dog.",
+    "size": "Large",
+    "lifespan": "10-12 human years, 40 dog years",
+    "origin": "Scotland",
+    "imageURL": "https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg",
+    "temperament": "Friendly, Reliable, Kind",
+    "weight": "55-75 lbs (25-34 kg)",
+    "coat": "Dense, Water-repellant, Double-coat"
+  },
+  {
+    "breedId": "B102",
+    "breedName": "labrador",
+    "description": "Outgoing, even-tempered, and friendly. Popular companion.",
+    "size": "Large",
+    "lifespan": "10-12 human years, 40 dog years",
+    "origin": "Canada",
+    "imageURL": "https://dog.ceo/api/img/labrador/n02099712_4017.jpg",
+    "temperament": "Gentle, Intelligent, Outgoing",
+    "weight": "55-80 lbs (25-36 kg)",
+    "coat": "Short, Dense, Water-resistant"
+  },
+  {
+    "breedId": "B103",
+    "breedName": "germanshepherd",
+    "description": "Courageous, confident, and keen. A highly versatile working dog.",
+    "size": "Large",
+    "lifespan": "9-13 human years, 35-45 dog years",
+    "origin": "Germany",
+    "imageURL": "https://dog.ceo/api/img/germanshepherd/n02106662_4591.jpg",
+    "temperament": "Alert, Loyal, Obedient",
+    "weight": "50-90 lbs (22-40 kg)",
+    "coat": "Medium, Double-coat, Straight"
+  },
+  {
+    "breedId": "B104",
+    "breedName": "bulldog",
+    "description": "Docile, friendly, and willful. Known for its loose, saggy skin.",
+    "size": "Medium",
+    "lifespan": "8-10 human years, 30-35 dog years",
+    "origin": "England",
+    "imageURL": "https://dog.ceo/api/img/bulldog/n02096585_11035.jpg",
+    "temperament": "Calm, Courageous, Friendly",
+    "weight": "40-50 lbs (18-23 kg)",
+    "coat": "Smooth, Fine-textured, Short"
+  },
+  {
+    "breedId": "B105",
+    "breedName": "beagle",
+    "description": "Merry, curious, and small. Great scent hound.",
+    "size": "Small",
+    "lifespan": "12-15 human years, 45-50 dog years",
+    "origin": "England",
+    "imageURL": "https://dog.ceo/api/img/beagle/n02088364_11132.jpg",
+    "temperament": "Loyal, Determined, Friendly",
+    "weight": "20-30 lbs (9-14 kg)",
+    "coat": "Smooth, Short, Dense"
+  },
+  {
+    "breedId": "B106",
+    "breedName": "poodle",
+    "description": "Intelligent, alert, and active. Known for their distinctive curly coat.",
+    "size": "Medium",
+    "lifespan": "12-15 human years, 45-50 dog years",
+    "origin": "Germany, France",
+    "imageURL": "https://dog.ceo/api/img/poodle/miniature/n02113712_6841.jpg",
+    "temperament": "Proud, Active, Smart",
+    "weight": "40-70 lbs (18-32 kg)",
+    "coat": "Curly, Dense, Hypoallergenic"
+  }
+]

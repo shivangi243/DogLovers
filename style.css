@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .dog-image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .navbar {
+    background-color: #343a40 !important;
+  }
+  
+  .nav-link {
+    color: #f8f9fa !important;
+  }
+  
+  .hero {
+    background: url('images/hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  

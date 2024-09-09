@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Lovers | Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .background img {
+      position: absolute;
+      width: 150px;
+      height: auto;
+      opacity: 0.7;
+      animation: float 20s infinite;
+    }
+
+    .background img:nth-child(1) {
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .background img:nth-child(2) {
+      top: 30%;
+      right: 10%;
+      animation-delay: 5s;
+    }
+
+    .background img:nth-child(3) {
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 10s;
+    }
+
+    .background img:nth-child(4) {
+      bottom: 10%;
+      right: 20%;
+      animation-delay: 15s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .form-container {
+      background-color: rgba(249, 249, 249, 0.9);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+    .form-container h2 {
+      font-family: 'Pacifico', cursive;
+      color: #ff6b6b;
+    }
+    .form-icon {
+      position: relative;
+      display: inline-block;
+    }
+    .form-icon i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #aaa;
+    }
+    .profile-img-preview {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      display: none;
+    }
+    .form-check-label {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <!-- Dog images with floating animation -->
+    <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?fit=crop&w=500&h=500" alt="Dog 1">
+    <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?fit=crop&w=500&h=500" alt="Dog 2">
+    <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?fit=crop&w=500&h=500" alt="Dog 3">
+    <img src="https://images.unsplash.com/photo-1506748686214e9df14e5e3d4a7b84a5?fit=crop&w=500&h=500" alt="Dog 4">
+  </div>
+  <div class="container my-5">
+    <div class="form-container mx-auto col-md-6">
+      <h2 class="text-center">Join the Dog Lovers Community!</h2>
+      <form id="signUpForm" class="my-4 needs-validation" novalidate>
+        
+        <!-- Name Field -->
+        <div class="mb-3 form-icon">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required>
+          <i class="fas fa-user"></i>
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        
+        <!-- Email Field -->
+        <div class="mb-3 form-icon">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required>
+          <i class="fas fa-envelope"></i>
+          <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+        
+        <!-- Phone Number Field -->
+        <div class="mb-3 form-icon">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" pattern="[0-9]{10}" required>
+          <i class="fas fa-phone"></i>
+          <div class="invalid-feedback">Please enter a 10-digit phone number.</div>
+        </div>
+        
+        <!-- Password Field -->
+        <div class="mb-3 form-icon">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required>
+          <i class="fas fa-lock"></i>
+          <div class="invalid-feedback">Password is required.</div>
+        </div>
+        
+        <!-- Favorite Dog Breed -->
+        <div class="mb-3">
+          <label for="breed" class="form-label">Favorite Dog Breed</label>
+          <select class="form-select" id="breed" required>
+            <option value="" disabled selected>Select your favorite breed</option>
+            <option value="Labrador">Labrador Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Bulldog">Bulldog</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Beagle">Beagle</option>
+            <!-- Add more breeds as needed -->
+          </select>
+          <div class="invalid-feedback">Please select your favorite breed.</div>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="mb-3">
+          <label for="profilePic" class="form-label">Upload Profile Picture</label>
+          <input type="file" class="form-control" id="profilePic" accept="image/*">
+          <img id="imgPreview" class="profile-img-preview mt-3" alt="Profile Preview">
+          <div id="imageError" class="invalid-feedback">Please upload a profile picture.</div>
+        </div>
+        
+        <!-- Terms and Conditions -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="terms" required>
+          <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+  <script>
+    // Form validation logic
+    (() => {
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.prototype.slice.call(forms).forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          const profilePic = document.getElementById('profilePic');
+          const imageError = document.getElementById('imageError');
+
+          if (!form.checkValidity() || !profilePic.files.length) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (!profilePic.files.length) {
+              imageError.style.display = 'block';
+            } else {
+              imageError.style.display = 'none';
+            }
+          } else {
+            // Show a message when the form is successfully submitted
+            alert('Thank you for signing up!');
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+
+    // Profile picture preview
+    const profilePicInput = document.getElementById('profilePic');
+    const imgPreview = document.getElementById('imgPreview');
+
+    profilePicInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          imgPreview.src = e.target.result;
+          imgPreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      } else {
+        imgPreview.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
